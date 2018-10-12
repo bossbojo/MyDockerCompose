@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  auth-service:
+    build: ./SignalR_Service
+    networks: 
+      - dev_network
+    ports: 
+      - 4001:80
+    environment: 
+      - ASPNETCORE_ENVIRONMENT="Production"
+
+networks: 
+  dev_network:
+
+  
